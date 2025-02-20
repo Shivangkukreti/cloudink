@@ -1,0 +1,38 @@
+<%- include("./include/head.ejs") %>
+<body style="width: 100vw;">
+    <%- include("./include/navbar.ejs") %>
+    <%- include("./include/flash.ejs") %>
+
+     <div class="row mx-1">
+         
+      <div id="add" class="card col-lg-7 col-md-5 col-sm-3 " 
+      style="width: 25vh;height: 25vh;border: 2px solid black;" >
+      <a href="/cloudink/image/new" >+</a>  
+      </div>
+
+         <% for( let ele of allimages ) { %>
+          <div class="card col-lg-5 col-md-3 col-sm-2 " style="width: 25vh;height: 35vh;" >
+            <a href="/cloudink/image/<%= ele._id %>">
+              <img src="<%= ele.img %>" class="card-img-top" style="height:25vh ;">
+            <div class="card-body">
+              <h5 class="card-title"><%= ele.content %></h5>
+            </div>
+            </a> 
+            
+          </div>  
+    
+   <% } %>
+</div>
+  
+
+  
+
+
+
+
+</body>
+</html>
+
+
+
+

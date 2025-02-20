@@ -1,0 +1,29 @@
+<%- include("./include/head.ejs") %>
+<body style="width: 100vw;">
+    <%- include("./include/navbar.ejs") %>
+    <%- include("./include/flash.ejs") %>
+
+
+    <div class="card offset-1 mt-4" style="width: 80vw;height: 60vh;">
+      <i style="font-size: 25vh;color: #146C94;height:60vh ;text-align: center;" class="fa-solid fa-cloud mx-2 card-img-top"></i>
+        <audio style="width: 100%;" controls src="<%= each.aud %>"></audio>
+        <div class="card-body">
+          <p class="card-text"><%= each.content %></p>
+        </div>
+      </div>
+
+   <br>
+      <form action="/cloudink/audio/<%= each.id %>/delete?_method=DELETE" class="d-inline offset-3 " method="post">
+        <button class="btn btn-outline-dark">DELETE</button>
+      </form>
+
+      <a href="/cloudink/audio/<%= each.id %>/edit"><button class="btn btn-outline-dark">EDIT</button></a>
+        
+      
+   
+
+
+
+
+</body>
+</html>

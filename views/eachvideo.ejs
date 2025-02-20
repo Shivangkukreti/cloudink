@@ -1,0 +1,28 @@
+<%- include("./include/head.ejs") %>
+<body style="width: 100vw;">
+    <%- include("./include/navbar.ejs") %>
+    <%- include("./include/flash.ejs") %>
+
+
+    <div class="card offset-1 mt-4" style="width: 80vw;height: 80vh;">
+        <video controls style="height:70vh ;" src="<%= each.video %>"></video>
+        <div class="card-body">
+          <p class="card-text"><%= each.content %></p>
+        </div>
+      </div>
+
+   <br>
+      <form action="/cloudink/video/<%= each.id %>/delete?_method=DELETE" class="d-inline offset-3 " method="post">
+        <button class="btn btn-outline-dark">DELETE</button>
+      </form>
+
+      <a href="/cloudink/video/<%= each.id %>/edit"><button class="btn btn-outline-dark">EDIT</button></a>
+        
+      
+   
+
+
+
+
+</body>
+</html>

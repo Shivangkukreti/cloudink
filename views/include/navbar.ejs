@@ -1,0 +1,45 @@
+<nav style="background-color: #F6F1F1 !important;" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="/"><i style="font-size: 7vh;color: #146C94;" class="fa-solid fa-cloud mx-2"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/cloudink">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/cloudink/image">IMAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cloudink/video">VIDEO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cloudink/audio">AUDIO</a>
+          </li>
+      </ul>
+      <form action="/cloudink/explore" method="get" class="d-flex my-2 mx-auto ">
+        <input name="search" class="form-control mr-sm-2" type="search" placeholder="Explore" aria-label="Search">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav mr-auto">
+
+        <% if (!currentuser) { %>
+         <li class="nav-item">
+        <a class="nav-link" href="/cloudink/login">LOGIN</a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="/cloudink/signup">SIGNUP</a>
+      </li>
+        <% } %>
+
+        <% if (currentuser) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/cloudink/logout">LOGOUT</a>
+          </li>
+        <% } %>
+        
+      </ul>
+      
+    </div>
+  </nav>

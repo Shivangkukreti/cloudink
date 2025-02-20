@@ -1,0 +1,24 @@
+<%- include("./include/head.ejs") %>
+<body style="width: 100vw;">
+    <%- include("./include/navbar.ejs") %>
+    <%- include("./include/flash.ejs") %>
+
+    <div class=" offset-2 mt-5" style="width: auto;">
+        <h3 class="d-inline">LOGIN</h3>
+        <form class="container mt-5 needs-validation" novalidate action="/cloudink/login" method="post">
+           
+              <label  class="form-label col-9 ">USERNAME
+                <input type="text" class="form-control" name="username"  required >
+              </label>
+              <label  class="form-label col-9 ">PASSWORD
+                <input type="password" class="form-control" name="password" required >
+              </label>
+              
+           <br>
+            <button id="buttonlight" class="btn btn-outline-dark offset-3" >SUBMIT</button>
+      </form>
+  
+
+
+</body>
+</html>

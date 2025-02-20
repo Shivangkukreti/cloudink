@@ -1,0 +1,40 @@
+<%- include("./include/head.ejs") %>
+<body style="width: 100vw;">
+    <%- include("./include/navbar.ejs") %>
+    <%- include("./include/flash.ejs") %>
+
+     <div class="row mx-1">
+         
+      <div id="add" class="card col-lg-7 col-md-5 col-sm-3 " 
+      style="width: 25vh;height: 25vh;border: 2px solid black;" >
+      <a href="/cloudink/audio/new" >+</a>  
+      </div>
+
+         <% for( let ele of allaudio ) { %>
+          <div class="card col-lg-5 col-md-3 col-sm-2 " style="width: 25vh;height: 35vh;" >
+            <a href="/cloudink/audio/<%= ele._id %>">
+              <i style="font-size: 16vh;color: #146C94;height:25vh; border: 1px #146C94 solid;text-align: center;" class="fa-solid fa-cloud  card-img-top"></i>
+            <div class="card-body">
+              <h5 class="card-title"><%= ele.content %></h5>
+            </div>
+            </a> 
+            
+          </div>  
+    
+   <% } %>
+
+   
+</div>
+  
+
+  
+
+
+
+
+</body>
+</html>
+
+
+
+

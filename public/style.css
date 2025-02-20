@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    width: 100vw;
+}
+
+.btn{
+    border: 1px #19A7CE solid;
+}
+.btn:hover{
+    background-color: #146C94;
+    color: white;
+}
+
+.card{
+    border: none;
+    margin-top: 1% !important;
+}
+
+.card:hover{
+    background-color: #AFD3E2;
+    transform: scale(1.01);
+}
+
+#add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15vh;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color: black;
+    font-weight: 500;
+}
+

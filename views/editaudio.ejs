@@ -1,0 +1,25 @@
+<%- include("./include/head.ejs") %>
+<body style="width: 100vw;">
+    <%- include("./include/navbar.ejs") %>
+
+
+
+    <div class=" offset-2 mt-5" style="width: auto;">
+        <h3 class="d-inline">EDIT AUDIO</h3> 
+        <form class="container mt-5 needs-validation" novalidate action="/cloudink/audio/<%= any.id %>/edit" enctype="multipart/form-data" method="post">
+           
+              <label  class="form-label col-9 ">CONTENT
+                <input type="text" class="form-control" name="content" value="<%= any.content %>" required >
+              </label>
+              <label  class="form-label col-9 ">AUDIO
+                <input type="file" class="form-control" name="aud"  >
+              </label>
+
+           <br>
+            <button id="buttonlight" class="btn btn-outline-dark offset-3" >SUBMIT</button>
+      </form>
+  
+
+</body>
+<script src="/code.js"></script>
+</html>

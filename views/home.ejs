@@ -1,0 +1,42 @@
+<%- include("./include/head.ejs") %>
+<body>
+    <%- include("./include/navbar.ejs") %>
+    <%- include("./include/flash.ejs") %>
+    
+
+    <div class="row mx-1">
+  
+           <% for( let ele of x ) { %>
+
+            <% if (ele.img) { %>
+             <div class="card col-lg-5 col-md-3 col-sm-2 " style="width: 25vh;height: 35vh;" >
+              <a href="/cloudink/image/<%= ele._id %>">
+                <img src="<%= ele.img %>" class="card-img-top" style="height:25vh ;">
+            <% } %>
+            <% if (ele.video) { %>
+             <div class="card col-lg-5 col-md-3 col-sm-2 " style="width: 25vh;height: 35vh;" >
+          <a href="/cloudink/video/<%= ele._id %>">
+           <video class="card-img-top" style="height:25vh;object-fit: cover;" src="<%= ele.video %>"></video>
+            <% } %>
+            <% if (ele.aud) { %>
+             <div class="card col-lg-5 col-md-3 col-sm-2 " style="width: 25vh;height: 35vh;" >
+      <a href="/cloudink/audio/<%= ele._id %>">
+        <i style="font-size: 16vh;color: #146C94;height:25vh; border: 1px #146C94 solid;text-align: center;" class="fa-solid fa-cloud  card-img-top"></i>
+            <% } %>
+              <div class="card-body">
+                <h5 class="card-title"><%= ele.content %></h5>
+              </div>
+              </a> 
+              
+            </div>  
+      
+     <% } %>
+
+
+
+  </div>
+
+
+
+</body>
+</html>
