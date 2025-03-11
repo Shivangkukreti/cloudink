@@ -303,7 +303,7 @@ app.get("/cloudink/audio/:id/edit",async(req,res,next)=>{
 
 
 
-app.post("/cloudink/video/:id/edit",uploadVideo.single('video'),async(req,res,next)=>{
+app.put("/cloudink/video/:id/edit",uploadVideo.single('video'),async(req,res,next)=>{
     try{let {id}=req.params
     let {content}=req.body
     let vid
@@ -316,7 +316,7 @@ app.post("/cloudink/video/:id/edit",uploadVideo.single('video'),async(req,res,ne
     res.redirect("/cloudink/video")}catch(err){next(err)}
 
 })
-app.post("/cloudink/audio/:id/edit",uploadAudio.single('aud'),async(req,res,next)=>{
+app.put("/cloudink/audio/:id/edit",uploadAudio.single('aud'),async(req,res,next)=>{
    try{ let {id}=req.params
     let {content}=req.body
     let aud,audimg
@@ -329,7 +329,7 @@ app.post("/cloudink/audio/:id/edit",uploadAudio.single('aud'),async(req,res,next
     res.redirect("/cloudink/audio")}catch(err){next(err)}
 
 })
-app.post("/cloudink/image/:id/edit",uploadImage.single('img'),async(req,res)=>{
+app.put("/cloudink/image/:id/edit",uploadImage.single('img'),async(req,res)=>{
    try{ let {id}=req.params
     let {content}=req.body
     let img

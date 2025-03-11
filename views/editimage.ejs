@@ -7,7 +7,7 @@
     <div class=" offset-2 mt-5" style="width: auto;">
         <h3 class="d-inline">EDIT IMAGE</h3>
         <img src="<%= any.img %>" style="height: 30vh;width: 30vh;margin-left: 5%;"> 
-        <form class="container mt-5 needs-validation" novalidate action="/cloudink/image/<%= any.id %>/edit" enctype="multipart/form-data" method="post">
+        <form class="container mt-5 needs-validation" novalidate action="/cloudink/image/<%= any.id %>/edit?_method=PUT" enctype="multipart/form-data" method="post">
            
               <label  class="form-label col-9 ">CONTENT
                 <input type="text" class="form-control" name="content" value="<%= any.content %>" required >
