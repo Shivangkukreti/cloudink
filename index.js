@@ -119,7 +119,7 @@ app.get("/cloudink/logout",(req,res,next)=>{
      }
      else{
         req.flash("success","LOGGED OUT !")
-        res.redirect("/cloudink")
+        res.redirect("/")
      }
     })
 })
